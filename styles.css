@@ -1,0 +1,106 @@
+        /* Basic Reset */
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+      }
+
+      body {
+          font-family: 'Poppins', sans-serif;
+          line-height: 1.6;
+          background-color: #f4f4f4;
+          color: #333;
+      }
+
+      /* Header Section */
+      header {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 2rem;
+          background: linear-gradient(45deg, #0077b6, #90e0ef);
+          color: #fff;
+      }
+
+      header h1 {
+          font-size: 2.5rem;
+          text-transform: uppercase;
+      }
+
+      /* Portfolio Section */
+      .portfolio {
+          padding: 4rem 2rem;
+      }
+
+      .portfolio h2 {
+          text-align: center;
+          margin-bottom: 2rem;
+          font-size: 2rem;
+          color: #0077b6;
+      }
+
+      .portfolio-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          gap: 2rem;
+      }
+
+      .portfolio-item {
+          background: #fff;
+          border-radius: 8px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          overflow: hidden;
+          transition: transform 0.3s;
+      }
+
+      .portfolio-item:hover {
+          transform: translateY(-10px);
+      }
+
+      .portfolio-item img {
+          width: 100%;
+          display: block;
+      }
+
+      .portfolio-item h3 {
+          margin: 1rem;
+          font-size: 1.5rem;
+      }
+
+      .portfolio-item p {
+          margin: 1rem;
+          color: #555;
+      }
+
+      /* Scroll Effect */
+      .portfolio-item {
+          opacity: 0;
+          transform: translateY(50px);
+          animation: fadeInUp 0.6s ease-out forwards;
+      }
+
+      .portfolio-item:nth-child(odd) {
+          animation-delay: 0.3s;
+      }
+
+      @keyframes fadeInUp {
+          from {
+              opacity: 0;
+              transform: translateY(50px);
+          }
+          to {
+              opacity: 1;
+              transform: translateY(0);
+          }
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+          header h1 {
+              font-size: 2rem;
+          }
+
+          .portfolio h2 {
+              font-size: 1.75rem;
+          }
+      }
